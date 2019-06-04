@@ -1,4 +1,9 @@
+# React Nice Inputs Test
+
+[![Build Status](https://travis-ci.org/davizp/react-nice-inputs-test.svg?branch=master)](https://travis-ci.org/davizp/react-nice-inputs-test)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 
 ## Available Scripts
 
