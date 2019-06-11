@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { Select } from 'react-nice-inputs';
 
 const _internals = {};
@@ -15,22 +15,30 @@ class SelectWrapper extends Component {
     countries: ''
   }
 
-  _handleChange = (value, name) => {
-    this.setState({ [name]: value });
+  _handleChange = (value, name, event) => {
+
+    this.setState({ [event.target.name]: event.target.value });
+    // this.setState({ [name]: value });
   }
 
   render() {
 
     return (
-      <Select
-        name="countries"
-        value={this.state.countries}
-        classList={ [] }
-        onChange={ this._handleChange }
-        options={_internals.countriesOptions}
-        // attrs={}
-        defaultText: 'Select a Country...'
-      />
+      <div className="input-controls">
+        <label htmlFor="countries">
+          Select a Country:
+        </label>
+        <Select
+          id="countries"
+          name="countries"
+          value={this.state.countries}
+          classList={ [] }
+          onChange={ this._handleChange }
+          options={_internals.countriesOptions}
+          // attrs={}
+          defaultText="Select a Country..."
+        />
+      </div>
     );
   }
 }
