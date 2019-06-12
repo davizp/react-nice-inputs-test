@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { InputGroup } from 'react-nice-inputs';
 
 const _internals = {};
@@ -13,24 +13,33 @@ _internals.petsOptions = [
 class InputGroupWrapper extends Component {
 
   state = {
-    pets: ''
+    pets: []
   }
 
-  _handleChange = (value, name) => {
-    this.setState({ [name]: value });
+  _handleChange = (value, name, event) => {
+
+    const pets = value.split(',');
+
+    // console.log({value, name, event });
+
+    this.setState({ [name]: pets });
   }
 
   render() {
 
     return (
-      <InputGroup
-        type="checkbox"
-        name="pets"
-        value={this.state.pets}
-        classList={ [] }
-        onChange={ this._handleChange }
-        options={_internals.petsOptions}
-      />
+      <div className="input-controls">
+        <label htmlFor="pets">Pets:</label>
+        <InputGroup
+          type="checkbox"
+          id="pets"
+          name="pets"
+          value={this.state.pets}
+          classList={ [] }
+          onChange={ this._handleChange }
+          options={_internals.petsOptions}
+        />
+      </div>
     );
   }
 }

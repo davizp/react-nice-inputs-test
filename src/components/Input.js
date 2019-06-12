@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { Input } from 'react-nice-inputs';
 
 class InputWrapper extends Component {
@@ -15,7 +15,7 @@ class InputWrapper extends Component {
   render() {
 
     return (
-      <Fragment>
+      <div className="input-controls">
         <label htmlFor="firstName">First Name: </label>
         <Input
           type="text"
@@ -26,7 +26,7 @@ class InputWrapper extends Component {
           onChange={ this.handleChange }
           attrs={{ placeholder: 'enter a value' }}
         />
-      </Fragment>
+      </div>
     );
   }
 }
