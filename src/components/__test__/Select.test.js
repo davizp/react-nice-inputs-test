@@ -20,32 +20,6 @@ describe('Testing <Select />', () => {
     expect(select.props().value).toBe('');
   });
 
-
-  it('Expected to change value to hn', () => {
-
-    const element = mount(<Select />);
-
-    const fakeChange = {
-      target: {
-        name: 'countries',
-        value: 'hn'
-      }
-    };
-
-    let input = element.find('select');
-
-    expect(input.props().value).toBe('');
-
-    input.simulate('change', fakeChange);
-
-    element.update();
-
-    input = element.find('select');
-
-    expect(input.props().value).toBe('hn');
-  });
-<<<<<<< HEAD
-
   describe('Expected to change value from hn then to empty', () => {
 
     const element = mount(<Select />);
@@ -116,6 +90,4 @@ describe('Testing <Select />', () => {
       expect(input.props().value).toBeFalsy();
     });
   });
-=======
->>>>>>> 639619220029e0e7b8c8f4dc0ad9da1068d66aba
 });
