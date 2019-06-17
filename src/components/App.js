@@ -3,7 +3,8 @@ import '../css/App.css';
 
 import Input from './Input';
 import Select from './Select';
-import InputGroup from './InputGroup';
+import InputGroupChekbox from './InputGroupCheckbox';
+import InputGroupRadio from './InputGroupRadio';
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
 
       <Input />
       <Select />
-      <InputGroup />
+      <InputGroupChekbox />
+      <InputGroupRadio />
     </div>
   );
 }

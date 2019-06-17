@@ -1,8 +1,8 @@
 import React from 'react';
-import InputGroup from '../InputGroup';
+import InputGroup from '../InputGroupRadio';
 import { mount, shallow } from 'enzyme';
 
-describe('Testing <InputGroup />', () => {
+describe('Testing <InputGroup /> ', () => {
 
   it('Expected to render', () => {
 
@@ -25,16 +25,16 @@ describe('Testing <InputGroup />', () => {
 
     const element = mount(<InputGroup />);
 
-    const fakeArrayValues = ['dogs', 'parrots'];
+    const fakeArrayValues = ['house'];
 
-    it('Expected to check dogs option', () => {
+    it('Expected to check car option', () => {
 
-      let input = element.find('#checkbox-pets-dogs');
+      let input = element.find('#radio-tasks-car');
 
       const fakeChange = {
         target: {
-          name: 'pets',
-          value: 'dogs'
+          name: 'tasks',
+          value: 'car'
         }
       };
 
@@ -44,18 +44,18 @@ describe('Testing <InputGroup />', () => {
 
       element.update();
 
-      input = element.find('#checkbox-pets-dogs');
+      input = element.find('#radio-tasks-car');
 
       expect(input.props().checked).toBeTruthy();
     });
 
-    it('Expected to check Parrots option', () => {
-      let input = element.find('#checkbox-pets-parrots');
+    it('Expected to check house option', () => {
+      let input = element.find('#radio-tasks-house');
 
       const fakeChange = {
         target: {
-          name: 'pets',
-          value: 'parrots'
+          name: 'tasks',
+          value: 'house'
         }
       };
 
@@ -65,14 +65,14 @@ describe('Testing <InputGroup />', () => {
 
       element.update();
 
-      input = element.find('#checkbox-pets-parrots');
+      input = element.find('#radio-tasks-house');
 
       expect(input.props().checked).toBeTruthy();
     });
 
-    it('Expected Values to be dogs and parrots', () => {
+    it('Expected Values to be house', () => {
 
-      expect(element.state('pets')).toEqual(fakeArrayValues);
+      expect(element.state('tasks')).toEqual(fakeArrayValues);
     });
   });
 });
