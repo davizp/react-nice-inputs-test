@@ -20,7 +20,7 @@ class InputGroupWrapper extends Component {
 
     const pets = value.split(',');
 
-    // console.log({value, name, event });
+    // this.setState({ pets[event.target.name]: event.target.value });
 
     this.setState({ [name]: pets });
   }
