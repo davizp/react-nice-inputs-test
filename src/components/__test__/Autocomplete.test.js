@@ -45,37 +45,13 @@ describe('testing Autocomplete component', () => {
       let countryLabel = element.find('[data-value="hn"]');
 
       console.log('countryLabel', countryLabel.text());
-      countryLabel.simulate('click');
+      // countryLabel.simulate('click');
 
      	input = element.find('#country');
 
-     	console.log('input.value()', input.debug());
+     	// console.log('input.value()', input.debug());
 
-      // expect(input.text()).toEqual('Honduras');
+      // expect(input.props().value).toEqual('Honduras');
     });
-
-    // it('Expected list change', () => {
-
-    //   let input = element.find('#country');
-
-    //   const fakeChange = {
-    //     target: {
-    //       name: 'country',
-    //       value: 'hon'
-    //     }
-    //   };
-
-    //   input.simulate('change', fakeChange);
-
-    //   element.update();
-
-    //   let countryList = element.find('#dropdown-autocomplete-country');
-
-	   //  input = element.find('#country');
-
-    //   expect(countryList.state('country')).toEqual('hn');
-    // });
-
-
   });
 })
