@@ -5,6 +5,7 @@ import Input from './Input';
 import Select from './Select';
 import InputGroupChekbox from './InputGroupCheckbox';
 import InputGroupRadio from './InputGroupRadio';
+import AutoComplete from './Autocomplete';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Select />
       <InputGroupChekbox />
       <InputGroupRadio />
+      <AutoComplete />
     </div>
   );
 }
