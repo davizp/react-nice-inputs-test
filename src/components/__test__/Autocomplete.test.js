@@ -44,14 +44,13 @@ describe('testing Autocomplete component', () => {
 
       let countryLabel = element.find('[data-value="hn"]');
 
-      console.log('countryLabel', countryLabel.text());
-      // countryLabel.simulate('click');
+      countryLabel.simulate('click');
 
      	input = element.find('#country');
 
      	// console.log('input.value()', input.debug());
 
-      // expect(input.props().value).toEqual('Honduras');
+      expect(input.props().value).toEqual('Honduras');
     });
   });
 })

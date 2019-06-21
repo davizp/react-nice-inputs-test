@@ -10,8 +10,6 @@ class DropDownDateWrapper extends Component {
 
   _handleChange = (value, name, event) => {
 
-    console.log({value, name, event});
-
     // this.setState({ [event.target.name]: event.target.value });
 
     this.setState({ [name]: value });

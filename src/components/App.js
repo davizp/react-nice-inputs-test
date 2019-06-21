@@ -7,6 +7,7 @@ import InputGroupChekbox from './InputGroupCheckbox';
 import InputGroupRadio from './InputGroupRadio';
 import AutoComplete from './Autocomplete';
 import DropDownDates from './DropDownDates';
+import InputMask from './InputMask';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <InputGroupRadio />
       <AutoComplete />
       <DropDownDates />
+      <InputMask />
     </div>
   );
 }
