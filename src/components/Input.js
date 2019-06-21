@@ -8,8 +8,8 @@ class InputWrapper extends Component {
   }
 
   handleChange = (value, name, event) => {
-    // this.setState({ [name]: value });
-    this.setState({ [event.target.name]: event.target.value });
+    this.setState({ [name]: value });
+    // this.setState({ [event.target.name]: event.target.value });
   }
 
   render() {

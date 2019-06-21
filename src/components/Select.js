@@ -17,8 +17,8 @@ class SelectWrapper extends Component {
 
   _handleChange = (value, name, event) => {
 
-    this.setState({ [event.target.name]: event.target.value });
-    // this.setState({ [name]: value });
+    // this.setState({ [event.target.name]: event.target.value });
+    this.setState({ [name]: value });
   }
 
   render() {
