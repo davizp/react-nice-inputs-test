@@ -21,13 +21,22 @@ describe('Testing <InputGroup /> ', () => {
     expect(input.props().value).toStrictEqual([]);
   });
 
-  describe('Expected to change value from hn then to empty', () => {
+  describe('Expected to change the value 3 times', () => {
 
     const element = mount(<InputGroup />);
 
     const fakeArrayValues = ['dogs', 'parrots'];
 
-    it('Expected to check dogs option', () => {
+    it('Expected the input\'s value to be empty', () => {
+
+      let input = element.find('#checkbox-pets-dogs');
+
+      expect(input.props().checked).toBeFalsy();
+
+    });
+
+
+    it('Expected to check the dogs option', () => {
 
       let input = element.find('#checkbox-pets-dogs');
 
@@ -37,8 +46,6 @@ describe('Testing <InputGroup /> ', () => {
           value: 'dogs'
         }
       };
-
-      expect(input.props().checked).toBeFalsy();
 
       input.simulate('change', fakeChange);
 
@@ -58,8 +65,6 @@ describe('Testing <InputGroup /> ', () => {
           value: 'parrots'
         }
       };
-
-      expect(input.props().checked).toBeFalsy();
 
       input.simulate('change', fakeChange);
 

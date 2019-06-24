@@ -21,7 +21,7 @@ describe('Testing <InputGroup /> ', () => {
     expect(input.props().value).toStrictEqual([]);
   });
 
-  describe('Expected to change value from hn then to empty', () => {
+  describe('Expected to change in each event', () => {
 
     const element = mount(<InputGroup />);
 
@@ -37,8 +37,6 @@ describe('Testing <InputGroup /> ', () => {
           value: 'car'
         }
       };
-
-      expect(input.props().checked).toBeFalsy();
 
       input.simulate('change', fakeChange);
 
@@ -58,8 +56,6 @@ describe('Testing <InputGroup /> ', () => {
           value: 'house'
         }
       };
-
-      expect(input.props().checked).toBeFalsy();
 
       input.simulate('change', fakeChange);
 
