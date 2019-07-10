@@ -7,13 +7,13 @@
     "enzyme-adapter-react-16": "^1.14.0",
     "react": "16.8.6",
     "react-dom": "16.8.6",
-    "react-nice-inputs": "1.0.53",
+    "react-nice-inputs": "^1.0.55",
     "react-scripts": "3.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom --verbose",
+    "test": "react-scripts test --env=jsdom --verbose --no-cache",
     "test:debug": "jest --debug",
     "eject": "react-scripts eject"
   },

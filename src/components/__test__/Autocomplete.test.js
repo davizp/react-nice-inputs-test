@@ -20,37 +20,4 @@ describe('testing Autocomplete component', () => {
 
     expect(input.props().dataList).toHaveLength(3);
   });
-
-  describe('Expected to change value', () => {
-
-    const element = mount(<Autocomplete />);
-
-    it('Expected to populate HN option', () => {
-
-      let input = element.find('#country');
-
-      const fakeChange = {
-        target: {
-          name: 'country',
-          value: 'hon'
-        }
-      };
-
-      expect(element.state('country')).toEqual('');
-
-      input.simulate('change', fakeChange);
-
-      element.update();
-
-      let countryLabel = element.find('[data-value="hn"]');
-
-      countryLabel.simulate('click');
-
-     	input = element.find('#country');
-
-     	// console.log('input.value()', input.debug());
-
-      expect(input.props().value).toEqual('Honduras');
-    });
-  });
 })

@@ -35,8 +35,6 @@ describe('Testing <Select />', () => {
 
       let input = element.find('select');
 
-      expect(input.props().value).toBe('');
-
       input.simulate('change', fakeChange);
 
       element.update();
